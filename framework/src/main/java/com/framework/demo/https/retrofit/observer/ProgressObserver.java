@@ -1,6 +1,7 @@
 package com.framework.demo.https.retrofit.observer;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 
 /**
  * 可以设置加载窗口的观察者
@@ -34,7 +35,12 @@ public abstract class ProgressObserver<T> extends HttpRxObserver<T> implements P
         if (mDialog == null) return;
         mDialog.setCancelable(isCancel);
         if (isCancel) {
-            mDialog.setOnCancelListener(dialogInterface -> onCancelProgress());
+            mDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    onCancelProgress();
+                }
+            });
         }
     }
 

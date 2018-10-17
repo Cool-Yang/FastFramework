@@ -14,7 +14,7 @@ public class LogUtil {
      * 初始化log工具，在app入口处调用
      *
      */
-    public static void init(boolean isDebug) {
+    public static void init(final boolean isDebug) {
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 .showThreadInfo(false)  //是否选择显示线程信息，默认为true
                 .methodCount(0)         //方法数显示多少行，默认2行
