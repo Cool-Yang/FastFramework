@@ -1,0 +1,17 @@
+# FastFramework
+设计的初衷是为了方便开发时抽离公共代码，每次的新建项目都要从老项目中抽取代码移植，很麻烦，所以有了这个想法，初步阶段一步步完善。
+
+
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.Cool-Yang:FastFramework:Tag'
+	}
